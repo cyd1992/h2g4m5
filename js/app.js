@@ -19,11 +19,9 @@ function init() {
 	"width": width+"px",
 	"height":height +"px"
 	});
-	alert("2");
 	$("canvas").attr({"width" : width+"px",
 					  "height": height +"px"}	
 					 );
-	alert("3");
 
 	menu_scene = new MenuScene();
 	stage.addChild(menu_scene);
@@ -42,6 +40,7 @@ function MenuScene()
 	var title = new createjs.Text("Match Game", "60px Arial", "#ffffff");
 	title.x = 100;
 	title.y = 100;
+
 	this.addChild(title);
 
 	var menu_start = new createjs.Text("Start","100px Arial", "#ffffff");
@@ -69,6 +68,7 @@ function GameScene(){
 	var timer = new createjs.Text("This is a Timer", "30px Arial", "#ffffff");
 	timer.x = 100;
 	timer.y = 300;
+	timer.name = "Timer";
 	this.addChild(timer);
 
 	var match = new Match(400,200);
